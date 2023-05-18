@@ -5,14 +5,14 @@ describe('reverseString', () => {
     expect(reverseString('hello')).toEqual('olleh');
   });
 
-  skip('reverses multiple words', () => {
+  test('reverses multiple words', () => {
     expect(reverseString('hello there')).toEqual('ereht olleh')
   })
 
-  skip('works with numbers and punctuation', () => {
+  test('works with numbers and punctuation', () => {
     expect(reverseString('123! abc!')).toEqual('!cba !321')
   })
-  skip('works with blank strings', () => {
+  test('works with blank strings', () => {
     expect(reverseString('')).toEqual('')
   })
 });

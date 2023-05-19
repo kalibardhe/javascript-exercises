@@ -1,12 +1,22 @@
-const sumAll = function(start, end) {
-  let sum = 0;
+function sumAll(start, end) {
+    if (typeof start !== 'number' || typeof end !== 'number') {
+        return 'ERROR';
+    }
 
-  for (let i = start; i <= end; i++) {
-    sum += i;
-  }
+    if (start < 0 || end < 0) {
+        return 'ERROR';
+    }
 
-  return sum;
-};
+    let sum = 0;
+    const min = Math.min(start, end);
+    const max = Math.max(start, end);
+
+    for (let i = min; i <= max; i++) {
+        sum+= i;
+    }
+
+    return sum;
+}
 
 // Do not edit below this line
 module.exports = sumAll;
